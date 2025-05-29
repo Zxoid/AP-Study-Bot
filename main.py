@@ -1,9 +1,9 @@
 import os
 import discord
 from discord.ext import commands
-import asyncio  # You also need to import asyncio
+import asyncio
 
-token = os.getenv("DISCORD_TOKEN")
+token = "DISCORD_TOKEN"
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -2409,13 +2409,69 @@ list.add("apple");
 String fruit = list.get(0);""")
    await asyncio.sleep(1)
 
+@bot.command()
+async def csaunit8(ctx):
+   await ctx.send ("""
+   **APCSA Unit 8: 2D Arrays**
 
+   **2D Array**: An array of arrays, like a grid or table (rows and columns).  
+   **Declaration**: `int[][] matrix;`  
+   **Initialization**: `matrix = new int[3][4];` creates 3 rows and 4 columns.  
+   **Access**: Use two indices: `matrix[row][column]`  
+   **Traversal**: Nested loops to go through rows and columns.  
+   ```java
+   for (int i = 0; i < matrix.length; i++) {
+       for (int j = 0; j < matrix[i].length; j++) {
+           System.out.print(matrix[i][j] + " ");
+       }
+       System.out.println();
+   }
+   """)
+   await asyncio.sleep(1)
 
-   
-    
+@bot.command
+async def csaunit9(ctx):
+   await ctx.send("""
+   **APCSA Unit 9: Inheritance and Polymorphism**
 
-    
-                
+   **Inheritance**: A mechanism where one class (subclass) acquires properties and methods from another class (superclass).  
+   **Subclass**: The class that inherits from another class.  
+   **Superclass**: The class being inherited from.  
+   **extends**: Keyword used to declare inheritance.  
+   ```java
+   public class Dog extends Animal {
+       // Dog inherits from Animal
+   }
+   """)
+   await asyncio.sleep(1)
+
+@bot.command()
+async def csaunit10(ctx):
+    await ctx.send("""
+   **APCSA Unit 10: Recursion**
+
+   **Recursion**: When a method calls itself to solve a problem by breaking it into smaller subproblems.  
+   **Base Case**: The condition where the recursion stops.  
+   **Recursive Case**: The part of the method where it calls itself with modified parameters.  
+   **Stack Overflow**: An error caused by too many recursive calls without reaching the base case.  
+   **Trace**: The sequence of method calls during recursion.  
+   **Divide and Conquer**: Breaking a problem into smaller pieces, solving each recursively, and combining results.
+
+   Example (Factorial):
+   ```java
+   public int factorial(int n) {
+       if (n == 0) return 1;      // Base case
+       else return n * factorial(n - 1);  // Recursive case
+   }
+   """)
+    await asyncio.sleep(1)
+
+@bot.command()
+async def csastudyguide(ctx):
+    await ctx.send("""**AP Computer Science A Study Guide**
+   https://www.simplestudies.org/groups/ap-computer-science-a
+    """)
+    await asyncio.sleep(1)             
 
 @bot.event
 async def on_ready():
